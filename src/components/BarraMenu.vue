@@ -66,7 +66,7 @@
 
 import Img from '../assets/car.png'
 
-import Cards from './cards'
+
 
 export default {
 
@@ -81,7 +81,7 @@ export default {
 <style>
 body{
   margin-top: 100px;
-  margin-left:1em;
+
 }
 .cabecalho{
 

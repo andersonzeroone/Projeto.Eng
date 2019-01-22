@@ -1,6 +1,6 @@
 <template>
   <div>
-     <CardsInicio/>
+     <CardsProdutos/>
     <Barramenu/>
 
   </div>
@@ -11,7 +11,7 @@
 
 import Img from '../assets/car.png'
 
-import CardsInicio from './cardsInicio'
+import CardsProdutos from './cardsProdutos'
 
 import Barramenu from './BarraMenu'
 
@@ -24,7 +24,7 @@ export default {
    },
    components:{
 
-     CardsInicio,
+     CardsProdutos,
      Barramenu
 
    }
