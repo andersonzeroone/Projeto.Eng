@@ -5,8 +5,8 @@
         <h1>Mercadão Baratino</h1>
         <img class="img" :src="img">
         <div class="info">
-          <h4>Compre mais</h4>
-          <p>Pague menos</p>
+          <h4 ></h4>
+          <p v-for="produto in produtos">Pague menos</p>
         </div>
         <div class="card-preco">
           <span>R$ 23</span>
@@ -149,19 +149,42 @@
 
 <script>
 import Img from "../assets/img4.jpeg";
+import axios from 'axios'
+
+let produtos
+let produto
+
 export default {
   data: function() {
     return {
       img: Img,
-      efeitoClick: null
+      efeitoClick: null,
+      produtos: produtos
     };
   },
   methods: {
     comprar () {
       this.$router.push('/comprar/');
-    }
-  }
-};
+    },
+      test(){
+       axios.get('http://191.252.103.186:8080/api/produtos').then(function(response){
+         console.log(response.data[0].ID_PRODUTO)
+
+         produtos = response.data
+         for(let i =0; i <=10; i ++){
+           let id = produtos[i].PRODUTO
+         console.log(id)
+         }
+
+       })
+
+     }
+  },
+   mounted(){
+     this.test()
+
+   }
+}
 </script>
 
 <style>

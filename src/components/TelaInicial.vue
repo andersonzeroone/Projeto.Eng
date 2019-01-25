@@ -15,6 +15,7 @@ import CardsInicio from './cardsInicio'
 
 import Barramenu from './BarraMenu'
 
+
 export default {
 
      data:function(){
@@ -28,6 +29,8 @@ export default {
      Barramenu
 
    }
+
+
 }
 </script>
 
