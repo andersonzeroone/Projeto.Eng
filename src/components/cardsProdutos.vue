@@ -1,190 +1,67 @@
 <template>
   <div>
-    <div class="card1">
-      <div class="cardTitulo">
-        <h1>Mercadão Baratino</h1>
-        <img class="img" :src="img">
-        <div class="info">
-          <h4 ></h4>
-          <p v-for="produto in produtos">Pague menos</p>
+        <div class="card1" v-for="produto  in produtos" :key="produto.ID_PRODUTO">
+          <div class="cardTitulo">
+            <h1>Mercadão Baratino</h1>
+            <img class="img" :src="img">
+            <div class="info">
+              <h4></h4>
+              <p>{{produto.PRODUTO}}</p>
+            </div>
+            <div class="card-preco">
+              <span>R${{produto.PRECO}}</span>
+              <b-button class="buttonComprar" type="submit" @click="comprar()">comprar</b-button>
+            </div>
+          </div>
         </div>
-        <div class="card-preco">
-          <span>R$ 23</span>
-          <b-button class="buttonComprar" type="submit" @click="comprar()" >comprar</b-button>
-        </div>
-      </div>
-    </div>
-        <div class="card1">
-      <div class="cardTitulo">
-        <h1>Mercadão Baratino</h1>
-        <img class="img" :src="img">
-        <div class="info">
-          <h4>Compre mais</h4>
-          <p>Pague menos</p>
-        </div>
-        <div class="card-preco">
-          <span>R$ 23</span>
-          <b-button class="buttonComprar" type="submit" @click="comprar()" >comprar</b-button>
-        </div>
-      </div>
-    </div>
-        <div class="card1">
-      <div class="cardTitulo">
-        <h1>Mercadão Baratino</h1>
-        <img class="img" :src="img">
-        <div class="info">
-          <h4>Compre mais</h4>
-          <p>Pague menos</p>
-        </div>
-        <div class="card-preco">
-          <span>R$ 23</span>
-          <b-button class="buttonComprar" type="submit" @click="comprar()" >comprar</b-button>
-        </div>
-      </div>
-    </div>
-        <div class="card1">
-      <div class="cardTitulo">
-        <h1>Mercadão Baratino</h1>
-        <img class="img" :src="img">
-        <div class="info">
-          <h4>Compre mais</h4>
-          <p>Pague menos</p>
-        </div>
-        <div class="card-preco">
-          <span>R$ 23</span>
-          <b-button class="buttonComprar" type="submit" @click="comprar()" >comprar</b-button>
-        </div>
-      </div>
-    </div>
-        <div class="card1">
-      <div class="cardTitulo">
-        <h1>Mercadão Baratino</h1>
-        <img class="img" :src="img">
-        <div class="info">
-          <h4>Compre mais</h4>
-          <p>Pague menos</p>
-        </div>
-        <div class="card-preco">
-          <span>R$ 23</span>
-          <b-button class="buttonComprar" type="submit" @click="comprar()" >comprar</b-button>
-        </div>
-      </div>
-    </div>
-        <div class="card1">
-      <div class="cardTitulo">
-        <h1>Mercadão Baratino</h1>
-        <img class="img" :src="img">
-        <div class="info">
-          <h4>Compre mais</h4>
-          <p>Pague menos</p>
-        </div>
-        <div class="card-preco">
-          <span>R$ 23</span>
-          <b-button class="buttonComprar" type="submit" @click="comprar()" >comprar</b-button>
-        </div>
-      </div>
-    </div>
-        <div class="card1">
-      <div class="cardTitulo">
-        <h1>Mercadão Baratino</h1>
-        <img class="img" :src="img">
-        <div class="info">
-          <h4>Compre mais</h4>
-          <p>Pague menos</p>
-        </div>
-        <div class="card-preco">
-          <span>R$ 23</span>
-          <b-button class="buttonComprar" type="submit" @click="comprar()" >comprar</b-button>
-        </div>
-      </div>
-    </div>
-        <div class="card1">
-      <div class="cardTitulo">
-        <h1>Mercadão Baratino</h1>
-        <img class="img" :src="img">
-        <div class="info">
-          <h4>Compre mais</h4>
-          <p>Pague menos</p>
-        </div>
-        <div class="card-preco">
-          <span>R$ 23</span>
-          <b-button class="buttonComprar" type="submit" @click="comprar()" >comprar</b-button>
-        </div>
-      </div>
-    </div>
-        <div class="card1">
-      <div class="cardTitulo">
-        <h1>Mercadão Baratino</h1>
-        <img class="img" :src="img">
-        <div class="info">
-          <h4>Compre mais</h4>
-          <p>Pague menos</p>
-        </div>
-        <div class="card-preco">
-          <span>R$ 23</span>
-          <b-button class="buttonComprar" type="submit" @click="comprar()" >comprar</b-button>
-        </div>
-      </div>
-    </div>
-        <div class="card1">
-      <div class="cardTitulo">
-        <h1>Mercadão Baratino</h1>
-        <img class="img" :src="img">
-        <div class="info">
-          <h4>Compre mais</h4>
-          <p>Pague menos</p>
-        </div>
-        <div class="card-preco">
-          <span>R$ 23</span>
-          <b-button class="buttonComprar" type="submit" @click="comprar()" >comprar</b-button>
-        </div>
-      </div>
-
-    </div>
- <div class="Outros">
-      <h1>Outros Mercados</h1>
-    </div>
   </div>
 </template>
 
 <script>
 import Img from "../assets/img4.jpeg";
-import axios from 'axios'
+import axios from "axios";
 
-let produtos
-let produto
+
+//produto;
 
 export default {
+  produtos: '',
   data: function() {
     return {
       img: Img,
       efeitoClick: null,
-      produtos: produtos
+      produtos: this.produtos
     };
   },
   methods: {
-    comprar () {
-      this.$router.push('/comprar/');
+    comprar() {
+      this.$router.push("/comprar/");
     },
-      test(){
-       axios.get('http://191.252.103.186:8080/api/produtos').then(function(response){
-         console.log(response.data[0].ID_PRODUTO)
+    test() {
 
-         produtos = response.data
-         for(let i =0; i <=10; i ++){
-           let id = produtos[i].PRODUTO
-         console.log(id)
-         }
+ for(let card=0; card <=10 ; card++){
+         axios
+        .get("http://191.252.103.186:8080/api/produtos")
+        .then(response => {
 
-       })
+            this.produtos = response.data;
 
-     }
-  },
-   mounted(){
-     this.test()
+            console.log(this.produtos);
 
-   }
+        })
+        .catch(error => {
+          console.log(error);
+
+        })
+
 }
+    }
+  },
+  mounted() {
+    this.test();
+    console.log(this.produtos)
+  }
+};
 </script>
 
 <style>
