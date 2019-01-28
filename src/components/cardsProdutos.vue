@@ -1,28 +1,28 @@
 <template>
   <div>
+    <div>
         <div class="card1" v-for="produto  in produtos" :key="produto.ID_PRODUTO">
           <div class="cardTitulo">
             <h1>Mercadão Baratino</h1>
             <img class="img" :src="img">
             <div class="info">
-              <h4></h4>
-              <p>{{produto.PRODUTO}}</p>
+              <h4>{{produto.PRODUTO}}</h4>
+              <p></p>
             </div>
             <div class="card-preco">
-              <span>R${{produto.PRECO}}</span>
+              <span v-money="'R$'">{{produto.PRECO}}</span>
               <b-button class="buttonComprar" type="submit" @click="comprar()">comprar</b-button>
             </div>
           </div>
         </div>
+    </div>
   </div>
 </template>
 
 <script>
 import Img from "../assets/img4.jpeg";
 import axios from "axios";
-
-
-//produto;
+import app from "../App"
 
 export default {
   produtos: '',
@@ -31,6 +31,8 @@ export default {
       img: Img,
       efeitoClick: null,
       produtos: this.produtos
+
+
     };
   },
   methods: {
@@ -39,14 +41,13 @@ export default {
     },
     test() {
 
- for(let card=0; card <=10 ; card++){
+
          axios
         .get("http://191.252.103.186:8080/api/produtos")
         .then(response => {
 
             this.produtos = response.data;
 
-            console.log(this.produtos);
 
         })
         .catch(error => {
@@ -54,7 +55,7 @@ export default {
 
         })
 
-}
+
     }
   },
   mounted() {
@@ -100,9 +101,9 @@ export default {
 }
 
 .info h4 {
-  font-size: 1.4em;
+  font-size: 1em;
   font-weight: 100;
-  padding: 4px 20px;
+  padding: 2px 10px;
 }
 
 .info p {
@@ -112,9 +113,10 @@ export default {
 }
 .card-preco {
   float: left;
-  font-size: 150%;
-  padding: 1px 15px;
-} /**/
+  font-size: 130%;
+  /*padding: 2px 20px;*/
+  margin-right: 1%;
+}
 
 .buttonComprar {
   position: relative;

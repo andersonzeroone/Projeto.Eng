@@ -12,8 +12,6 @@
 
 import TelaInicial from './TelaInicial'
 
-import Img from '../assets/car.png'
-
 export default {
 
   components: {
