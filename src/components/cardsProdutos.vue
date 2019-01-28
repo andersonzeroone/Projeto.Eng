@@ -7,11 +7,10 @@
             <img class="img" :src="img">
             <div class="info">
               <h4>{{produto.PRODUTO}}</h4>
-              <p></p>
             </div>
             <div class="card-preco">
               <span v-money="'R$'">{{produto.PRECO}}</span>
-              <b-button class="buttonComprar" type="submit" @click="comprar()">comprar</b-button>
+              <b-button class="buttonComprar" type="submit" @click="comprar()">Comprar</b-button>
             </div>
           </div>
         </div>
@@ -103,19 +102,14 @@ export default {
 .info h4 {
   font-size: 1em;
   font-weight: 100;
-  padding: 2px 10px;
+  padding: 8px 10px;
 }
 
-.info p {
-  font-size: 1.1em;
-  font-weight: 100;
-  padding: 1px 15px;
-}
 .card-preco {
   float: left;
   font-size: 130%;
-  /*padding: 2px 20px;*/
-  margin-right: 1%;
+  padding: 1px 0px 4px 10px;
+
 }
 
 .buttonComprar {
@@ -125,8 +119,8 @@ export default {
   background-color: #555;
   border: solid 1px #777;
   border-radius: 5px;
-  padding: 5px 10px;
-  right: -35px;
-  top: -12px;
+  padding: 3px 5px;
+  right: -24px;
+  top: -8px;
 }
 </style>

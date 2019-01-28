@@ -19,7 +19,7 @@
           <h4>Compre mais</h4>
           <p>Pague menos</p>
         </div>
-        <b-button class="buttonVisitar" type="submit" @click="comprar()">Visitar</b-button>
+        <b-button class="buttonVisitar" type="submit" @click="visitar()">Visitar</b-button>
       </div>
     </div>
     <div class="card1">
@@ -30,7 +30,7 @@
           <h4>Compre mais</h4>
           <p>Pague menos</p>
         </div>
-        <b-button class="buttonVisitar" type="submit" @click="comprar()">Visitar</b-button>
+        <b-button class="buttonVisitar" type="submit" @click="visitar()">Visitar</b-button>
       </div>
     </div>
     <div class="card1">
@@ -41,7 +41,7 @@
           <h4>Compre mais</h4>
           <p>Pague menos</p>
         </div>
-        <b-button class="buttonVisitar" type="submit" @click="comprar()">Visitar</b-button>
+        <b-button class="buttonVisitar" type="submit" @click="visitar()">Visitar</b-button>
       </div>
     </div>
     <div class="card1">
@@ -52,7 +52,7 @@
           <h4>Compre mais</h4>
           <p>Pague menos</p>
         </div>
-        <b-button class="buttonVisitar" type="submit" @click="comprar()">Visitar</b-button>
+        <b-button class="buttonVisitar" type="submit" @click="visitar()">Visitar</b-button>
       </div>
     </div>
     <div class="card1">
@@ -85,7 +85,7 @@
           <h4>Compre mais</h4>
           <p>Pague menos</p>
         </div>
-        <b-button class="buttonVisitar" type="submit" @click="comprar()">Visitar</b-button>
+        <b-button class="buttonVisitar" type="submit" @click="visitar()">Visitar</b-button>
       </div>
     </div>
        <div class="card1">
@@ -96,7 +96,7 @@
           <h4>Compre mais</h4>
           <p>Pague menos</p>
         </div>
-        <b-button class="buttonVisitar" type="submit" @click="comprar()">Visitar</b-button>
+        <b-button class="buttonVisitar" type="submit" @click="visitar()">Visitar</b-button>
       </div>
     </div>
        <div class="card1">
@@ -107,7 +107,7 @@
           <h4>Compre mais</h4>
           <p>Pague menos</p>
         </div>
-        <b-button class="buttonVisitar" type="submit" @click="comprar()">Visitar</b-button>
+        <b-button class="buttonVisitar" type="submit" @click="visitar()">Visitar</b-button>
       </div>
     </div>
 

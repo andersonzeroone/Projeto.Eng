@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import Hello from '../components/Hello'
 import TelaDeVisita from '../components/TelaDeVisita'
+import TelaDeCompra from '../components/TelaDeCompra'
 import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
@@ -22,6 +23,11 @@ export default new Router({
       path: '/visitar',
       name: 'Visit',
       component: TelaDeVisita
+    },
+    {
+      path: '/comprar',
+      name: 'Comprar',
+      component: TelaDeCompra
     }
   ]
 })
