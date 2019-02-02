@@ -44,39 +44,6 @@
         <b-button class="buttonVisitar" type="submit" @click="visitar()">Visitar</b-button>
       </div>
     </div>
-    <div class="card1">
-      <div class="cardTitulo">
-        <h1>Mercadão Baratino</h1>
-        <img class="img" :src="img">
-        <div class="info">
-          <h4>Compre mais</h4>
-          <p>Pague menos</p>
-        </div>
-        <b-button class="buttonVisitar" type="submit" @click="visitar()">Visitar</b-button>
-      </div>
-    </div>
-    <div class="card1">
-      <div class="cardTitulo">
-        <h1>Mercadão Baratino</h1>
-        <img class="img" :src="img">
-        <div class="info">
-          <h4>Compre mais</h4>
-          <p>Pague menos</p>
-        </div>
-        <b-button class="buttonVisitar" type="submit" @click="comprar()">Visitar</b-button>
-      </div>
-    </div>
-       <div class="card1">
-      <div class="cardTitulo">
-        <h1>Mercadão Baratino</h1>
-        <img class="img" :src="img">
-        <div class="info">
-          <h4>Compre mais</h4>
-          <p>Pague menos</p>
-        </div>
-        <b-button class="buttonVisitar" type="submit" @click="comprar()">Visitar</b-button>
-      </div>
-    </div>
        <div class="card1">
       <div class="cardTitulo">
         <h1>Mercadão Baratino</h1>
@@ -88,29 +55,6 @@
         <b-button class="buttonVisitar" type="submit" @click="visitar()">Visitar</b-button>
       </div>
     </div>
-       <div class="card1">
-      <div class="cardTitulo">
-        <h1>Mercadão Baratino</h1>
-        <img class="img" :src="img">
-        <div class="info">
-          <h4>Compre mais</h4>
-          <p>Pague menos</p>
-        </div>
-        <b-button class="buttonVisitar" type="submit" @click="visitar()">Visitar</b-button>
-      </div>
-    </div>
-       <div class="card1">
-      <div class="cardTitulo">
-        <h1>Mercadão Baratino</h1>
-        <img class="img" :src="img">
-        <div class="info">
-          <h4>Compre mais</h4>
-          <p>Pague menos</p>
-        </div>
-        <b-button class="buttonVisitar" type="submit" @click="visitar()">Visitar</b-button>
-      </div>
-    </div>
-
 
   </div>
 </template>
@@ -187,7 +131,7 @@ export default {
   border: solid 1px #777;
   border-radius: 5px;
   padding: 5px 10px;
-  right: -135px;
-  top: -12px;
+  right: -190px;
+  top: -20px;
 }
 </style>

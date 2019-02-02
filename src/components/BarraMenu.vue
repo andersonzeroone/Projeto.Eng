@@ -89,7 +89,7 @@ body{
   position: fixed ;
   z-index: 99;
   width: 100%;
-  height: 11%;;
+  height: 8%;;
   box-sizing: border-box;
   top: 0;
   left: 0;
