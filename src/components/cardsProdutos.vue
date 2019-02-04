@@ -12,9 +12,9 @@
         <div class="card-preco">
           <span v-money="'R$'">{{produto.PRECO}}</span>
           <!-- <b-button class="buttonComprar" type="submit" @click="comprar()">Comprar</b-button> -->
-          <button class="button-contador" >{{produto.contador}}</button>
-          <button class="button-contador" @click="add">+</button>
-          <button class="button-contador" @click="remove">-</button>
+          <button class="button-contador" >{{contador[produto.ID_PRODUTO] = 0}}</button>
+          <button class="button-contador" @click="add({{produto.ID_PRODUTO}})">+</button>
+          <button class="button-contador" @click="remove({{produto.ID_PRODUTO}})">-</button>
           <b-button class="button-add">Add/Produto</b-button>
           <b-button class="button-add">Cancelar</b-button>
         </div>
@@ -37,7 +37,7 @@ export default {
       efeitoClick: null,
       produtos: this.produtos,
       nomeProdutos: this.nomeProdutos,
-      contador:0,
+      contador:[],
 
     }
 
@@ -67,14 +67,17 @@ export default {
         });
     },
 
-    add(){
-    this.contador++
-    console.log(this.contador);
+    add(ID_PRODUTO){
+      console.log(ID_PRODUTO)
+    this.contador[ID_PRODUTO]++
+    console.log(this.contador[ID_PRODUTO]);
   },
-  remove(){
+  remove(ID_PRODUTO){
 
+        if (this.contador[ID_PRODUTO] >0){
+            this.contador[ID_PRODUTO]--
+        }
 
-         this.contador--
 
 
 
