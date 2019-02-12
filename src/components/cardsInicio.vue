@@ -76,7 +76,7 @@ export default {
 };
 </script>
 
-<style>
+<style escoped>
 .card1 {
   position: relative;
   z-index: 1 !important;
@@ -131,7 +131,7 @@ export default {
   border: solid 1px #777;
   border-radius: 5px;
   padding: 5px 10px;
-  right: -190px;
+  right: -135px;
   top: -20px;
 }
 </style>

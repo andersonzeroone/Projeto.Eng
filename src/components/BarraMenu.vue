@@ -89,7 +89,7 @@ body{
   position: fixed ;
   z-index: 99;
   width: 100%;
-  height: 8%;;
+  height: 11%;;
   box-sizing: border-box;
   top: 0;
   left: 0;
@@ -100,7 +100,7 @@ body{
 
 .marca{
   float: right;
-  font-size: 25px;
+  font-size: 2em;
   font-weight: bold;
   font-style: italic;
   color: red !important;
@@ -109,7 +109,7 @@ body{
 }
 .menu{
 
-  font-size: 20px;
+  font-size: 1.3em;
   font-weight: bold;
   color: red;
 }
