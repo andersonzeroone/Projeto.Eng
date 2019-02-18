@@ -13,8 +13,8 @@
           <span v-money="'R$'">{{produto.PRECO}}</span>
           <!-- <b-button class="buttonComprar" type="submit" @click="comprar()">Comprar</b-button> -->
           <!-- <button class="button-contador">{{produto.ID_PRODUTO}}</button> -->
-          <button class="button-contador" >{{contador}}</button>
-          <button class="button-contador" @click="add(produto.ID_PRODUTO)">+</button>
+          <button class="button-contador" >{{produto.quantidade}}</button>
+          <button class="button-contador" @click="add(produto)">+</button>
           <button class="button-contador" @click="remove">-</button>
           <b-button class="button-add">Add/Produto</b-button>
           <b-button class="button-add">Cancelar</b-button>
@@ -49,7 +49,16 @@ export default {
       axios
         .get("http://191.252.103.186/api/produtos")
         .then(response => {
-          this.produtos = response.data;
+          let list = [];
+          console.log(response)
+
+          list = response.data.map(elemento => {
+            elemento.quantidade = 0;
+            return elemento;
+            //list.push(elemento);
+
+          })
+          this.produtos = list//response.data;
           this.produtos = this.produtos.slice(0, 10);
 
         })
@@ -57,11 +66,12 @@ export default {
           console.log(error);
         });
     },
-    add(produtoID_PRODUTO){
+    add(produto){
 
-      this.contador[produtoID_PRODUTO]++
+      produto.quantidade++;
+      //this.contador[produtoID_PRODUTO]++
 
-      console.log(this.contador);
+      //console.log(produto.contador);
 
   },
   remove(){
